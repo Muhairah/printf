@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+#define BUFFER_SIZE 100
 
 /**
  * struct print - struct that print a function
