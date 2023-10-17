@@ -1,48 +1,6 @@
 #include "main.h"
 
 /**
- * print_bin - prints unsigned int argument in binary format.
- * @arguments: va_list containing the unsigned int argument.
- * @buffer: the buffer to store the printed characters.
- * @index: the current index in the buffer.
- *
- * Return: the number of characters printed.
-*/
-
-int print_bin(va_list arguments, char *buffer, unsigned int index)
-{
-	unsigned int num = va_arg(args, unsigned int);
-	int count = 0;
-
-	if (num == 0)
-	{
-		buffer[index] = '0';
-		count++;
-	}
-	else
-	{
-		unsigned int temp = num;
-		int binary_digits = 0;
-
-		while (temp != 0)
-		{
-			temp /= 2;
-			binary_digits++;
-		}
-		for (int i = binary_digits - 1; i >= 0; i--)
-		{
-			int bit = (num >> i) & 1;
-
-			buffer[index] = bit + '0';
-			index++;
-			count++;
-		}
-	}
-	return (count);
-}
-
-
-/**
  * print_fun - selects the correct function to operat.
  * @s: argument indentifier
  * @index: index for argument indentifier
@@ -54,7 +12,6 @@ int (*print_fun(const char *s, int index))(va_list, char *, unsigned int)
 		{"c", print_chr}, {"s", print_str},
 		{"i", print_int}, {"d", print_int},
 		{" %", print_prg}, {NULL, NULL},
-		{"b", print_bin},
 	};
 	int i = 0, j = 0, first_index;
 
