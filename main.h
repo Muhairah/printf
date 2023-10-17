@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+#define OUTPUT_BUF_SIZE 1024
 
 /**
  * struct print - struct that print a function
@@ -33,5 +34,6 @@ char *fill_oct_array(char *bnr, char *oct);
 char *fill_long_oct_array(char *bnr, char *oct);
 char *fill_short_oct_array(char *bnr, char *oct);
 char *fill_hex_array(char *bnr, char *hex, int isupp, int limit);
+int print_bin(va_list arguments, char *buffer, unsigned int index);
 
 #endif
