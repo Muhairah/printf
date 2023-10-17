@@ -6,6 +6,7 @@
 #include <stdlib.h>
 
 
+
 /**
  * struct print - struct that print a function
  * @type_arg: identifier
