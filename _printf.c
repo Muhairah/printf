@@ -3,7 +3,6 @@
 /**
  * _printf - format for output conversion and data print.
  * @format: input string.
- * @...: variable arguments
  *
  * Return: number of chars printed.
  */
