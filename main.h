@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-
+#define OUTPUT_BUF_SIZE 1024
 
 /**
  * struct print - struct that print a function
